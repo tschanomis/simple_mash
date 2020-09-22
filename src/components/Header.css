@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: #3a5ec9;
+  color: white;
+}
+
+.Header h1 {
+  align-self: center;
+}
+
+.Header h3 {
+  width: 100px;
+  margin: 0 10px 0 10px;
+}
+
+.Header h3:hover {
+  text-decoration: underline;
+}
