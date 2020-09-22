@@ -1,5 +1,5 @@
 import React from 'react';
-import './Boxitems.css';
+import './style/Boxitems.css';
 
 export default function Boxitems(props) {
 

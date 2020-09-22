@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 
 import Boxitems from './Boxitems';
 
-import './Rating.css';
+import './style/Rating.css';
 
 const letterApi = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
 

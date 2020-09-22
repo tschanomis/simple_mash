@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
-import './Home.css';
+import './style/Home.css';
 
 export default function Home(props) {
 
