@@ -1,0 +1,19 @@
+.Rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 75px);
+  width: 100%;
+}
+
+.Rating-container {
+  width: 100%;
+}
+
+.Rating-container-action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}

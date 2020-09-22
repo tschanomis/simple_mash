@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Header from './components/Header';
+import Home from './components/Home';
+import Rating from './components/Rating';
+import Ranking from './components/Ranking';
+
 import './App.css';
 
-function App() {
+export default function App() {
+
+  const [stock, setStock] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const updateNote = (letter) => {
+    if (stock.findIndex(e => e.letter === letter) > -1) {
+      setStock(stock.map(e => e.letter === letter ? { ...e, note: e.note + 1 } : e))
+    } else {
+      setStock([...stock, { letter: letter, note: 1 }])
+    }
+  }
+
+  const setUser = (user) => {
+    if (currentUser) {
+      setCurrentUser(null)
+      setStock([])
+    } else {
+      setCurrentUser(user)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/ranking">
+            <Ranking currentUser={currentUser} setUser={setUser} stock={stock} />
+          </Route>
+          <Route path="/rating">
+            <Rating currentUser={currentUser} updateNote={updateNote} />
+          </Route>
+          <Route path="/">
+            <Home currentUser={currentUser} setUser={setUser} />
+          </Route>
+        </Switch >
+      </Router >
+    </div >
   );
 }
-
-export default App;

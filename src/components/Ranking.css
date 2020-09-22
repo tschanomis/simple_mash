@@ -1,0 +1,83 @@
+.Ranking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: calc(100vh - 75px);
+  overflow: scroll;
+}
+
+.Ranking::-webkit-scrollbar {
+  display: none;
+}
+
+.Ranking h2 {
+  color: gray;
+}
+
+.Ranking-alert {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  border: solid 1px gray;
+  background-color: white;
+}
+
+.Ranking-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.Ranking-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Ranking-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 450px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: solid 1px lightgray;
+  color: gray;
+}
+
+.Ranking-list-item-description {
+  flex-grow: 4;
+  text-align: start;
+  margin-left: 50px;
+}
+
+.Ranking-list-item-description p {
+  margin: 5px;
+}
+
+.Ranking-list-item-rank {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: relative;
+  background-color: #3a5ec9;
+  color: white;
+}
